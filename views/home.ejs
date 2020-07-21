@@ -1,0 +1,71 @@
+
+
+<%- include('partials/header') -%>
+
+<body>
+ <div class="container-fluid">
+   
+       <h1> THE BLOG PAGE</h1>
+       <p> <%= startingContent %></p>
+
+       <div>
+        <a href='http://localhost:3000/compose' class="btn btn-success">Add new Post</a></button>
+       </div>
+      
+      <!-- this checks each posts by name and sets its link -->
+       <div class="row" id="section-posts">
+        <%  posts.forEach(function(post){ %>
+          <div class="col-sm-3">
+             <div class="card"  id="card-posts>
+                 <img class="card-img-top" src="..." alt="Card image cap">
+                     <div class="card-body">
+                        <h5 class="card-title"><%=post.title%></h5>
+                       <p class="card-text"><%=post.content.substring(0, 100) + " ..."%></p>
+                       <a href="/posts/<%=post._id%>" class="btn btn-primary">continue reading</a>
+                     </div>
+                </div>
+          </div>
+          <% }) %>
+        </div>
+       
+
+
+      
+
+             
+
+      
+      <!-- <div class="img-thumbnail">
+
+        <%  posts.forEach(function(post){ %>
+
+          <div>        
+            <h1><%=post.title%></h1>
+         </div> 
+          <div>
+            <p>
+            <%=post.content.substring(0, 100) + " ..."%>
+            <a href="/posts/<%=post._id%>">continue reading</a>
+            </p>
+          </div>  
+      
+              <% }) %>
+
+      </div> -->
+       
+        
+                
+
+
+   </div>  
+ </div>
+
+
+
+
+    
+</body>
+
+<%- include('partials/footer') -%>
+
+
